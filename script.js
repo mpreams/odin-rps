@@ -46,12 +46,13 @@ function playRound(humanChoice, computerChoice) {
     } else {
         result.textContent = "Tie";
     }
-    results.TEXT_NODE = "You: ${humanScore} Computer: ${computerScore}";
+    scores.textContent = `You: ${humanScore} Computer: ${computerScore}  `;
 }
 
 let results = document.createElement("div");
+let scores = document.createElement("p");
 results.setAttribute("class", "results");
-results.appendChild(document.createTextNode("You: ${humanScore} Computer: ${computerScore}"));
+results.appendChild(scores);
 let result = document.createElement("span");
 result.textContent = '';
 results.appendChild(result);
@@ -72,6 +73,7 @@ body.addEventListener('click', (e) => {
             playRound(choices[2], computerSelection);
             break;
     }
+    body.appendChild(results);
 });
 
 // function playGame() {
