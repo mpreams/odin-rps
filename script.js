@@ -77,6 +77,8 @@ body.addEventListener('click', (e) => {
     if (humanScore >= 5 || computerScore >= 5) {
         result.textContent = "Game Over";
         results.appendChild(result);
+        const buttons = document.querySelectorAll("button");
+        buttons.forEach((button) => body.removeChild(button));
     }
 
     body.appendChild(results);
