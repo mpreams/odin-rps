@@ -46,7 +46,7 @@ function playRound(humanChoice, computerChoice) {
     } else {
         result.textContent = "Tie";
     }
-    scores.textContent = `You: ${humanScore} Computer: ${computerScore}  `;
+    scores.textContent = `You: ${humanScore} Computer: ${computerScore}`;
 }
 
 let results = document.createElement("div");
@@ -73,6 +73,12 @@ body.addEventListener('click', (e) => {
             playRound(choices[2], computerSelection);
             break;
     }
+
+    if (humanScore >= 5 || computerScore >= 5) {
+        result.textContent = "Game Over";
+        results.appendChild(result);
+    }
+
     body.appendChild(results);
 });
 
