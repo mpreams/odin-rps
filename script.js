@@ -47,13 +47,17 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
-function playGame() {
-    for (i=0; i < 5; i++) {
-        let humanSelection = getHumanChoice();
-        let computerSelection = getComputerChoice();
-        playRound(humanSelection, computerSelection);
-        console.log(humanScore, computerScore)
-    }
-}
+let rock = document.querySelector('.rock');
+let paper = document.querySelector('.paper');
+let scissors = document.querySelector('.scissors');
 
-playGame();
+// function playGame() {
+//     for (i=0; i < 5; i++) {
+//         let humanSelection = getHumanChoice();
+//         let computerSelection = getComputerChoice();
+//         playRound(humanSelection, computerSelection);
+//         console.log(humanScore, computerScore)
+//     }
+// }
+
+// playGame();
